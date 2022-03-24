@@ -1,11 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./assets/css/main.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&#39;atelier du ferronnier | Vulcain ferronnerie</title>
+    <meta name="description" content="Nous disposons d&#39;un atelier pour la fabrication d&#39;ouvrages métallique de 130 M2 au sol sur la commune de Lecques dans le Gard. . L&#39;atelier est équipé d&#39;un poste à souder puissant et récent, d&#39;une cintreuse à galets pour cintrer des profils pour les pergolas, imposte de portail... D&#39;une perceuse à colonne, d&#39;une scie fraise en âge de retraite mais encore très travailleuse, un découpeur plasma pour">
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@400;700&display=swap" />
+    </noscript>
   </head>
   <body>
-    <h1 class="text-9xl font-bold underline">Hello world!</h1>
+    <nav role="navigation" aria-label="Menu principal" class="fixed z-10">
+  <div class="z-10 fixed left-0 top-0 w-full flex justify-between items-center bg-neutral-400 h-32">
+    <div class="p-8 flex-1">
+      <ul class="hidden xl:flex items-center">
+        
+          <li class="text-center text-white m-4">
+            <a href="/"  aria-current="page">
+              Accueil
+            </a>
+          </li>
+        
+          <li class="text-center text-white m-4">
+            <a href="/l-atelier-du-ferronnier" >
+              L&#39;atelier du ferronnier
+            </a>
+          </li>
+        
+          <li class="text-center text-white m-4">
+            <a href="/realisations" >
+              Réalisations
+            </a>
+          </li>
+        
+          <li class="text-center text-white m-4">
+            <a href="/contact" >
+              Contact
+            </a>
+          </li>
+        
+      </ul>
+      <div class="xl:hidden flex items-center">
+        <button aria-expanded="false" class="mobile-menu-button outline-none text-xs text-center text-white">
+          <div class="flex flex-col items-center p-2">
+            <span id="hamb-top" class="bg-white transition duration-300 mb-1 w-5 block h-0.5"></span>
+            <span id="hamb-mid" class="bg-white transition duration-300 mb-1 w-5 block h-0.5"></span>
+            <span id="hamb-bot" class="bg-white transition duration-300 w-5 block h-0.5"></span>
+          </div>
+          menu
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center p-4">
+      <img src="../assets/images/logo.webp" class="w-32">
+      <p class="mt-4 text-white text-sm md:text-base">Métal, local, durable, unique</p>
+    </div>
+    <div class="hidden md:block p-8 flex-1">
+      <a class="float-right rounded-full bg-white py-2 px-8" href="/contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="fixed overflow-hidden top-0 left-0 transition-all duration-300 mobile-menu text-xl bg-neutral-400 h-screen w-0 z-0">
+    <ul class="pt-40">
+      
+        <li class="text-left  pl-8 mb-8 text-white">
+          <a href="/"  aria-current="page">
+            Accueil
+          </a>
+        </li>
+      
+        <li class="text-left  pl-8 mb-8 text-white">
+          <a href="/l-atelier-du-ferronnier" >
+            L&#39;atelier du ferronnier
+          </a>
+        </li>
+      
+        <li class="text-left  pl-8 mb-8 text-white">
+          <a href="/realisations" >
+            Réalisations
+          </a>
+        </li>
+      
+        <li class="text-left  pl-8 mb-8 text-white">
+          <a href="/contact" >
+            Contact
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+</nav>
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    const hamburgerTop = document.getElementById("hamb-top");
+    const hamburgerMid = document.getElementById("hamb-mid");
+    const hamburgerBot = document.getElementById("hamb-bot");
+
+    btn.addEventListener("click", () => {
+      let x = btn.getAttribute("aria-expanded");
+      menu.classList.toggle("w-1/2");
+      if(x == "false"){
+        x = "true";
+      }
+      else{
+        x = "false";
+      }
+      btn.setAttribute("aria-expanded",x);
+      hamburgerTop.classList.toggle("open-top");
+      hamburgerMid.classList.toggle("open-mid");
+      hamburgerBot.classList.toggle("open-bot");
+    });
+  </script>
+    <main>
+      
+<section id="parcours" class="max-w-3xl mx-auto">
+  <h1 class="mt-64 mb-16 uppercase text-3xl md:text-6xl fjalla tracking-[10px] text-center">
+    Parcours
+  </h1>
+  <div class="p-8 mx-auto leading-relaxed">
+    <p>
+      Ferronnier d'art depuis 2008, initialement installé sur Saint Rémy de
+      Provence, j'ai depuis 2015, transféré mon activité de ferronnerie à
+      Valflaunès en limite Gard et Hérault. Je propose tout type d'ouvrages
+      métallique comme:
+      <ul class="my-4">
+        <li>- Portail (occultant, ajouré, avec ou sans
+          barreaudage, thermolaquage...)</li>
+        <li>- Menuiseries Acier, métallique (Châssis vitrés, porte d'entrée, sas d'entrée, véranda, verrières...)</li>
+        <li>- Mobilier d'intérieur et extérieur (Bibliothèque, Dressing, chaises, fauteuil, table à manger, table basse...)</li>
+        <li>- Pergola, tonnelle, treille</li>
+        <li>- Véranda, verrière, devanture (avec vantaux, coulissant...)</li>
+        <li>- Grilles en ferronnerie, contemporaine</li>
+        <li>- Escalier droit, tournant, colimaçon, balancé...</li>
+      </ul>
+    </p>
+    <p>
+      Basé dans le département de l'Hérault dans la région Pic Saint Loup à 25 kms au Nord de Montpellier, je me déplace dans toute la région Occitanie (Hérault,Gard, Lozère...) et même parfois nationalement suivant la mesure de vos projets.
+    </p>
+    <p>
+      De votre souhait, nous réalisons projections, modélisations et offre de prix pour répondre au plus près de vos attentes.
+    </p>
+  </div>
+  <div class="flex justify-center mt-8 mb-32">
+    <a class="rounded-full bg-black py-4 px-8 text-white" href="/contact">Contact</a>
+  </div>
+</section>
+<section id="entreprise" class="mb-16">
+  <h1 class="mt-64 mb-16 uppercase text-3xl md:text-6xl fjalla tracking-[10px] text-center">
+    L'entreprise, ses prestations et ses valeurs
+  </h1>
+  <div class="flex flex-wrap flex-col md:flex-row gap-4 w-11/12 mx-auto my-8">
+    <div class="bg-neutral-400 flex-1">
+      <img src="../assets/images/mobilieracier.webp">
+      <div class="p-4">
+        <h3 class="uppercase fjalla text-white text-xl py-4">Mobilier Acier</h3>
+        <p class="text-white">
+          Le mobilier acier tel que chaises fauteuil, table basse, table de salle à manger, bibliothèque, dressing, portes de placard sont autant d'ouvrages que nous pouvons effectuer dans notre atelier. Finition brut, vernis, mise en peinture, thermolaquage sont évidemment disponible à la demande du client.
+        </p>
+        <p class="text-white">
+          Nous avons également une petite partie de l'atelier consacré à la création bois. Pour vos plateaux de table, tablettes d'aménagement.
+        </p>
+      </div>
+    </div>
+    <div class="bg-neutral-400 flex-1">
+      <img src="../assets/images/menuiseries.webp">
+      <div class="p-4">
+        <h3 class="uppercase fjalla text-white text-xl py-4">Menuiseries métalliques, verrière, véranda</h3>
+        <p class="text-white">
+          Nous effectuons tout types ouvrages en menuiserie métallique. Porte d'entrée, verrière, sas d'entrée, cloisons vitrées avec ou sans rupture de pont thermique, verrière, véranda Acier, Corten laiton ou inox.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-wrap flex-col md:flex-row gap-4 w-11/12 mx-auto">
+    <div class="bg-neutral-400 flex-1">
+      <img src="../assets/images/valeurs.webp">
+      <div class="p-4">
+        <h3 class="uppercase fjalla text-white text-xl py-4">Nos valeurs</h3>
+        <p class="text-white">
+          Nous nous attachons à être au plus près de vos demandes de travaux. Nous apportons le plus de soin dans la conception, la fabrication, la finition et la pose de vos ouvrages métalliques. Nous essayons de respecter le plus possible les délais que nous avons fixé ensemble. Nous sommes en mesure de vous garantir vos ouvrage avec la garantie décennale.
+        </p>
+      </div>
+    </div>
+    <div class="bg-neutral-400 flex-1">
+      <img src="../assets/images/simulations.webp">
+      <div class="p-4">
+        <h3 class="uppercase fjalla text-white text-xl py-4">Simulations</h3>
+        <p class="text-white">
+          Nous proposons la réalisation de simulations sous Sketchup pour tous vos projets de mobilier, pergolas, portail, menuiseries... pour que vous vous rendiez compte au mieux du rendu final
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+    <div class="p-16 flex flex-col bg-neutral-400">
+  <h3 class="fjalla uppercase text-xl text-white">Nos coordonnées</h3>
+  <div class="mt-8 text-lg">
+    <p class="text-white">Vulcain ferronnerie</p>
+    <p class="text-white">benjamin Rossat</p>
+    <p class="text-white">80, avenue du greanche</p>
+    <p class="text-white">34270 Valflaunès</p>
+    <p class="text-white">0671740075</p>
+    <p class="text-white">benjaminrossat@gmail.com</p>
+  </div>
+</div>
+<div class="flex flex-col text-lg text-center p-32 leading-loose underline">
+  <a href="/mentions-legales/">Mentions légales</a>
+  <a href="/politique-de-confidentialite/">Politique de confidentialité</a>
+  <a href="/parametres-des-cookies/">Paramètres des cookies</a>
+</div>
+
   </body>
 </html>

@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  color: lch(40% 68.8 34.5 / 50%);
+*{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgb(55 65 81/1);
+}
+
+.open-top{
+  transform-origin: bottom;
+  transform: translateY(6px) rotate(45deg);
+}
+
+.open-bot{
+  transform-origin: top;
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.open-mid{
+  transform: scale(0);
+}
+
+.hide{
+  display:none;
+  transform: translateX(-100%);
+}
+
+.fjalla{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.parcours{
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+.parcours:before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background-image: url('../images/lampe.webp');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }

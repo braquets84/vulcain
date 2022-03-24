@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Accueil",
+    "link": "/"
+  },
+  {
+    "title": "L'atelier du ferronnier",
+    "link": "/l-atelier-du-ferronnier"
+  },
+  {
+    "title": "Réalisations",
+    "link": "/realisations"
+  },
+  {
+    "title": "Contact",
+    "link": "/contact"
+  }
+]

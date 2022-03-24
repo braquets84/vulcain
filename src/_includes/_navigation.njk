@@ -1,0 +1,67 @@
+<nav role="navigation" aria-label="Menu principal" class="fixed z-10">
+  <div class="z-10 fixed left-0 top-0 w-full flex justify-between items-center bg-neutral-400 h-32">
+    <div class="p-8 flex-1">
+      <ul class="hidden xl:flex items-center">
+        {% for item in pages %}
+          <li class="text-center text-white m-4">
+            <a href="{{ item.link }}" {% if item.link in page.url %} aria-current="page"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="xl:hidden flex items-center">
+        <button aria-expanded="false" class="mobile-menu-button outline-none text-xs text-center text-white">
+          <div class="flex flex-col items-center p-2">
+            <span id="hamb-top" class="bg-white transition duration-300 mb-1 w-5 block h-0.5"></span>
+            <span id="hamb-mid" class="bg-white transition duration-300 mb-1 w-5 block h-0.5"></span>
+            <span id="hamb-bot" class="bg-white transition duration-300 w-5 block h-0.5"></span>
+          </div>
+          menu
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center p-4">
+      <img src="../assets/images/logo.webp" class="w-32">
+      <p class="mt-4 text-white text-sm md:text-base">Métal, local, durable, unique</p>
+    </div>
+    <div class="hidden md:block p-8 flex-1">
+      <a class="float-right rounded-full bg-white py-2 px-8" href="/contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="fixed overflow-hidden top-0 left-0 transition-all duration-300 mobile-menu text-xl bg-neutral-400 h-screen w-0 z-0">
+    <ul class="pt-40">
+      {% for item in pages %}
+        <li class="text-left  pl-8 mb-8 text-white">
+          <a href="{{ item.link }}" {% if item.link in page.url %} aria-current="page"{% endif %}>
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</nav>
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    const hamburgerTop = document.getElementById("hamb-top");
+    const hamburgerMid = document.getElementById("hamb-mid");
+    const hamburgerBot = document.getElementById("hamb-bot");
+
+    btn.addEventListener("click", () => {
+      let x = btn.getAttribute("aria-expanded");
+      menu.classList.toggle("w-1/2");
+      if(x == "false"){
+        x = "true";
+      }
+      else{
+        x = "false";
+      }
+      btn.setAttribute("aria-expanded",x);
+      hamburgerTop.classList.toggle("open-top");
+      hamburgerMid.classList.toggle("open-mid");
+      hamburgerBot.classList.toggle("open-bot");
+    });
+  </script>
