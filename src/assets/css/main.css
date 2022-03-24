@@ -31,13 +31,13 @@
   font-family: 'Fjalla One', sans-serif;
 }
 
-.parcours{
+#parcours{
   position: relative;
   background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
 }
 
-.parcours:before{
+#parcours:before{
   content: '';
   display: block;
   position: absolute;
